@@ -25,7 +25,7 @@ RUN apt-get update \
 
 RUN \
     # imagick
-    && echo "autodetect" | pecl install imagick \
+    echo "autodetect" | pecl install imagick \
     && docker-php-ext-enable imagick \
     # gd
     && docker-php-ext-install gd \
