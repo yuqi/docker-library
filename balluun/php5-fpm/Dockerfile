@@ -39,5 +39,8 @@ RUN \
     && docker-php-ext-enable redis \
     # mysqli
     && docker-php-ext-install mysqli \
+    # xdebug
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug \
     # clean up
     && rm -rf /tmp/pear/
