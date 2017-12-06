@@ -14,6 +14,8 @@ RUN apt-get update \
     # xdebug
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
+    # zip
+    && docker-php-ext-install zip \
     # clean up
     && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/* \
